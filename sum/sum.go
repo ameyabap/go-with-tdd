@@ -12,3 +12,12 @@ func Sum(numbers []int) int {
 	}
 	return sum
 }
+
+// SumAll sums all lists
+func SumAll(numbers ...[]int) []int {
+	var result []int
+	for _, number := range numbers {
+		result = append(result, Sum(number))
+	}
+	return result
+}
