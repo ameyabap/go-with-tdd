@@ -6,9 +6,7 @@ import (
 )
 
 func TestSumAll(t *testing.T) {
-	var slice = make([]int, 1, 1)
-	slice[0] = 1
-	slice[1] = 2
+	//var slice = make([]int, 1, 1)
 	checkSums := func(t *testing.T, sum, want []int) {
 		t.Helper()
 		if !reflect.DeepEqual(sum, want) {
