@@ -13,6 +13,11 @@ type Circle struct {
 	Radius float64
 }
 
+// Shape ...
+type Shape interface {
+	Area() float64
+}
+
 // Perimeter of circle
 func (c Circle) Perimeter() float64 {
 	return 2 * math.Pi * (c.Radius)
