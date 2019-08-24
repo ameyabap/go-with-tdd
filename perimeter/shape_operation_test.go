@@ -21,16 +21,16 @@ func TestArea(t *testing.T) {
 		want  float64
 	}{
 		{
-			Rectangle{5, 6},
-			30.0,
+			shape: Rectangle{5, 6},
+			want:  30.0,
 		},
 		{
-			Circle{10},
-			314.1592653589793,
+			shape: Circle{10},
+			want:  314.1592653589793,
 		},
 		{
-			Triangle{10, 10},
-			50.0,
+			shape: Triangle{10, 10},
+			want:  50.0,
 		},
 	}
 
