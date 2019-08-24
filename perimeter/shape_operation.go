@@ -2,6 +2,10 @@ package shapeoperation
 
 import "math"
 
+type Shape interface {
+	Area() float64
+}
+
 // Rectangle shape
 type Rectangle struct {
 	Width  float64
