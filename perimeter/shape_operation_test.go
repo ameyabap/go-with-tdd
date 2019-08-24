@@ -28,6 +28,10 @@ func TestArea(t *testing.T) {
 			Circle{10},
 			314.1592653589793,
 		},
+		{
+			Triangle{10, 10},
+			50.0,
+		},
 	}
 
 	for _, tc := range areaTestCases {
