@@ -30,14 +30,14 @@ func TestArea(t *testing.T) {
 		},
 		{
 			shape: Triangle{10, 10},
-			want:  50.0,
+			want:  51.0,
 		},
 	}
 
 	for _, tc := range areaTestCases {
 		got := tc.shape.Area()
 		if got != tc.want {
-			t.Errorf("got %.2f want %.2f", got, tc.want)
+			t.Errorf("For shape %#v, got %.2f want %.2f", tc.shape, got, tc.want)
 		}
 	}
 }
