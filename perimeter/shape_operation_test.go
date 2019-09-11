@@ -30,7 +30,7 @@ func TestArea(t *testing.T) {
 		},
 		{
 			shape: Triangle{10, 10},
-			want:  51.0,
+			want:  50.0,
 		},
 	}
 
