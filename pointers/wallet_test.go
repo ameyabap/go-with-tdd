@@ -9,14 +9,6 @@ import (
 //
 func TestWallet(t *testing.T) {
 
-	assertBalance := func(t *testing.T, wallet Wallet, want Bitcoin) {
-		assert.Equal(t, want, wallet.Balance())
-	}
-	assertError := func(t *testing.T, want error, got error) {
-		//assert.Equal(t, want, got)
-		assert.Equal(t, want, got)
-	}
-
 	t.Run("Deposit", func(t *testing.T) {
 		wallet := Wallet{}
 		wallet.Deposit(Bitcoin(10))
@@ -43,4 +35,12 @@ func TestWallet(t *testing.T) {
 		assertError(t, err, ErrInsufficientBalance)
 	})
 
+}
+
+func assertBalance(t *testing.T, wallet Wallet, want Bitcoin) {
+	assert.Equal(t, want, wallet.Balance())
+}
+func assertError(t *testing.T, want error, got error) {
+	//assert.Equal(t, want, got)
+	assert.Equal(t, want, got)
 }
